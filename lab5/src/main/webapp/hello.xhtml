@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Sport Club</title>
+</h:head>
+<h:body>
+	<h3>Sport Club</h3>
+	<h:form>
+		<div>Enter section: </div><h:inputText value="#{sportClubBean.section}"><br /></h:inputText>
+		<div>Enter FIO: </div><h:inputText value="#{sportClubBean.FIO}"><br /></h:inputText>
+		<div>Enter price: </div><h:inputText value="#{sportClubBean.price}"><br /></h:inputText>
+		<div></div>
+		<h:commandButton value="Add" action="#{sportClubBean.addToDb}"></h:commandButton>
+	</h:form>
+	<div></div>
+	<h:form>
+		<h:commandButton value="Print table of sportClubs" action="print"></h:commandButton>
+	</h:form>
+	<div></div>
+
+	<h:form>
+		<div>Enter section for search: </div><h:inputText value="#{sportClubBean.searchBySection}"><br /></h:inputText>
+		<h:commandButton value="Search" action="#{sportClubBean.search}"><br /></h:commandButton>
+		<h:outputText value="#{sportClubBean.resultOfSearch}"></h:outputText>
+	</h:form>
+	<h:form>
+		<div>Enter section for delete: </div><h:inputText value="#{sportClubBean.deleteBySection}"><br /></h:inputText>
+		<h:commandButton value="Delete" action="#{sportClubBean.delete}"><br /></h:commandButton>
+	</h:form>
+</h:body>
+</html>
